@@ -16,10 +16,8 @@
 
 Rails.application.routes.draw do
 
-  root to: 'home#index'
+  root to: 'articles#index'
 
-  get '/' => 'home#index'
-
-  get 'about' => 'home#about'
+  resources :articles, only: [:show]
 
 end
